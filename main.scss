@@ -1,0 +1,779 @@
+    *::selection {
+        background-color: var(--salmon);
+    }
+
+    :root {
+        --salmon: #EF9D71;
+        --black: #000;
+        --cyan: #80becc;
+        --white: #fff;
+        --dcyan: #1f2f32;
+        --dsalmon: #532521;
+        --yellow: #F5F19c;
+    }
+
+    body[theme="black"] {
+        background-color: var(--black);
+    }
+
+    body[theme="black"] .section {
+        color: var(--white);
+    }
+
+    body[theme="yello"] {
+        background-color: var(--yellow);
+    }
+
+    body[theme="yello"] .section {
+        color: var(--black);
+    }
+
+    body[theme="cyan"] {
+        background-color: var(--cyan);
+    }
+
+    body[theme="cyan"] .section {
+        color: var(--dcyan);
+    }
+
+    body[theme="salmon"] {
+        background-color: var(--salmon);
+    }
+
+    body[theme="salmon"] .section {
+        color: var(--dsalmon);
+    }
+
+    body[theme="white"] {
+        background-color: var(--white);
+    }
+
+    body[theme="white"] .section {
+        color: var(--black);
+    }
+
+    body {
+        // font-family:'PP_Neue_Machina_Inktrap_Medium';
+        // font-family:'PP_Neue_Machina_Plain_Light' ;
+        cursor: none;
+        transition: background-color ease-out .5s ;
+    }
+    
+    .cursor{
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+       background-color: purple;
+       position: fixed;
+       z-index: 99999;
+    }
+
+    .cursor-follower{
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 50%;
+    border: 2px solid purple;
+       position: fixed;
+    }
+
+
+    .main {
+        width: 100%;
+
+        .home {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+            .btmtext {
+                position: absolute;
+                bottom: 5%;
+                left: 3%;
+                width: 50%;
+                z-index: 4;
+
+                p {
+
+                    font-size: 20px;
+                }
+            }
+
+            .videodiv {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+                // display: none;
+                z-index: 3;
+                clip-path: circle(var(--clip) at 50% 50%);
+
+                .video {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .marqueeContainer {
+                // background-color: aqua;
+                height: 100%;
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                // z-index: 2;
+
+                .heading {
+                    // background-color: antiquewhite;
+                    position: absolute;
+                    top: 7%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-size: 4rem;
+
+                    h1 {
+                        text-align: center;
+                        font-size: 2rem;
+                        font-weight: 500;
+
+                    }
+                }
+
+                .marquee {
+                    width: 90%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(1);
+                    font-family: 'PP_Neue_Machina_Inktrap_Medium';
+
+                    .row {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        gap: 2rem;
+                        transform: translateX(-50%);
+                        white-space: nowrap;
+                        line-height: 5vw;
+
+
+                        .elem {
+                            display: flex;
+                            align-items: center;
+                            gap: 1.3rem;
+
+                            h1 {
+
+                                font-size: 5vw;
+                            }
+
+                            div {
+                                height: 4rem;
+                                width: 4rem;
+                                // background-color: rgb(158, 193, 44);
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+
+                    .row2 {
+                        transform: translateX(-30%);
+
+                    }
+
+                    .row3 {
+                        transform: translateX(-40%);
+
+                    }
+
+                    .row4 {
+                        transform: translateX(-35%);
+
+                    }
+
+
+                }
+
+            }
+        }
+
+        .craft {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 2rem;
+            margin-top: 5rem;
+            position: relative;
+            gap: 3rem;
+            .text {
+                width: 45%;
+                position: sticky;
+                top: 0;
+                left: 0;
+
+                h2 {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                }
+
+                h1 {
+                    font-family: 'PP_Neue_Machina_Plain_Light';
+                    font-size: 6rem;
+                    line-height: 6rem;
+                    margin-top: 6rem;
+                    font-weight: lighter;
+                    margin-bottom: 3rem;
+                }
+
+                .craft-btn {
+                    padding: 1.3rem 2.5rem;
+                    border: 1px solid var(--dcyan);
+                    width: fit-content;
+
+                    .maskers {
+
+                        span {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+            .cards {
+                width: 55%;
+                padding: 0 2rem;
+                display: flex;
+                flex-direction: column;
+                row-gap: 3rem;
+                // background-color: #532521;
+                margin-top: 40rem;    
+                .card{
+                    background-color: var(--black);
+                    width: 35rem;
+                    // min-height: 10vh;
+                    color: var(--cyan);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 2rem;
+                    padding: 1.5rem 2rem;
+                   transform: scale(1);
+                   //    margin-top: 3rem;      
+                
+                &:hover{
+                   background-color: var(--dcyan);
+                   color: var(--cyan);
+                   scale: .95;
+                   transform: all ease 1s ;
+                }
+       
+                    .card-text{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;                  
+                        h1{
+                            font-size: 2rem;
+                        }
+                        p{
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .img{
+                      width: 8rem;
+                      height: 4rem;   
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      background-color: #80becc; 
+                      
+                    }
+                }
+            }
+        }
+
+        .real {
+            width: 100%;
+            // height: 400vh;
+
+            .cont {
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+
+                .slides {
+                    height: 100vh;
+                    width: 100%;
+                    display: flex;
+                    gap: 10;
+                    position: sticky;
+                    top: 0;
+                    left: 0;
+
+                    .slide1 {
+                        width: 100%;
+                        height: 100vh;
+                        flex-shrink: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        h1 {
+                            font-size: 6rem;
+                            line-height: 7vw;
+                        }
+
+                        .image {
+                            height: 20rem;
+                            width: 20rem;
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            transform: translateX(50%) translateY(-50%);
+                            border-radius: 50%;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+
+                    .slide2 {
+                        position: relative;
+                        width: 100%;
+                        height: 100vh;
+                        flex-shrink: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: 'PP_Neue_Machina_Plain_Light';
+
+
+                        .text {
+                            width: 60%;
+                            // color: var(--white);
+                            text-align: center;
+
+                            h1 {
+                                font-size: 9rem;
+                                line-height: 7rem;
+                                padding: 2.5rem 0;
+                            }
+
+                            h2 {
+                                position: absolute;
+                                width: 20%;
+                                font-size: 1.2rem;
+                                font-weight: 800;
+                                text-align: left;
+                            }
+
+                            h3 {
+                                font-size: 4rem;
+                                line-height: 5rem;
+                            }
+                        }
+
+                        .image1 {
+                            position: absolute;
+                            height: 13rem;
+                            width: 13rem;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            top: 60%;
+                            left: 25%;
+
+                        }
+
+                        .image2 {
+                            position: absolute;
+                            height: 18rem;
+                            width: 18rem;
+                            background-color: #532521;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            top: 0%;
+                            left: 50%;
+                            transform: translateY(-50%) translateX(-50%);
+                        }
+
+                        .image3 {
+                            position: absolute;
+                            height: 28rem;
+                            width: 28rem;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            bottom: 0%;
+                            left: 55%;
+                            transform: translateY(50%) translateX(-50%);
+
+                        }
+
+                        .image4 {
+                            position: absolute;
+                            height: 28rem;
+                            width: 28rem;
+                            top: 50%;
+                            right: 5%;
+                            transform: translateX(50%) translateY(-50%);
+                            border-radius: 50%;
+                            overflow: hidden;
+                        }
+
+                    }
+
+                    .slide3 {
+                        position: relative;
+                        width: 100%;
+                        height: 100vh;
+                        flex-shrink: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: 'PP_Neue_Machina_Plain_Light';
+
+
+                        .text {
+                            width: 60%;
+                            // color: var(--white);
+                            text-align: center;
+
+                            h1 {
+                                font-size: 9rem;
+                                line-height: 7rem;
+                                padding: 2.5rem 0;
+
+                            }
+
+                            h2 {
+                                position: absolute;
+                                width: 20%;
+                                font-size: 1.8rem;
+                                line-height: 1.5rem;
+                                font-weight: 800;
+                                text-align: left;
+                            }
+
+                            h3 {
+                                font-size: 4rem;
+                                line-height: 5rem;
+                                color: #000;
+                            }
+                        }
+
+                        .image1 {
+                            position: absolute;
+                            height: 13rem;
+                            width: 13rem;
+                            background-color: #532521;
+
+                            overflow: hidden;
+                            top: 60%;
+                            left: 25%;
+
+                        }
+
+                        .image2 {
+                            position: absolute;
+                            height: 18rem;
+                            width: 18rem;
+                            // overflow: hidden;
+                            top: 0%;
+                            left: 50%;
+                            transform: translateY(-40%) translateX(-50%);
+                            animation: rotation 1s linear infinite; // Removed unnecessary properties from animation
+                        }
+
+                        .image3 {
+                            position: absolute;
+                            height: 20rem;
+                            width: 25rem;
+                            overflow: hidden;
+                            bottom: 0%;
+                            left: 30%;
+                            transform: translateY(0) translateX(20%);
+                            
+                        }
+
+                        .image4 {
+                            position: absolute;
+                            height: 28rem;
+                            width: 28rem;
+                            top: 50%;
+                            right: 5%;
+                            transform: translateX(50%) translateY(-50%);
+                            border-radius: 50%;
+                            overflow: hidden;
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+        .team {
+            padding: 3rem 1rem;
+            width: 100%;
+            overflow: hidden;
+            font-family: 'PP_Neue_Machina_Plain_Light';
+            color: #000;
+
+            h1 {
+                font-size: 5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .list {
+                margin-top: 3rem;
+                // padding: 1.5rem 3rem;
+               
+                .listElem {
+                    // padding: 0rem 3rem;
+                    position: relative;
+                    border-bottom: 2px solid black;
+
+                    .wrapper {
+                        padding: 2rem 3rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        z-index: 5;
+                        position: relative;
+
+                        h3 {
+                            font-size: 2.5rem;
+                        }
+
+                        .text {
+                            display: flex;
+                            gap: 2rem;
+
+                            h2 {
+                                font-size: 3.5rem;
+                            }
+                        }
+                    }
+
+                    .layer {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        background-color: blue;
+                        width: 100%;
+                        height: 0%;
+                        z-index: 4;
+                        
+                        
+                        &:hover {
+                            // height: 100%; /* Expand to full height on hover */
+                            // background-color: blue;
+                            // transition: height 0.5s ease; /* Added transition for smooth height change on hover */
+                        }
+                    } 
+
+                    .img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        background-color: rgb(130, 74, 158);
+                        width: 20rem;
+                        height: 20rem;
+                        border-radius: 50%;
+                        z-index: 10;
+                        opacity: 0;
+                        transform: translate(-50%, -50%);               
+                    }            
+                    // .img:hover{
+
+                    //         opacity: 1; 
+                    //     }      
+                }
+            }
+        }
+        .capsules {
+            width: 100%;
+            height: 100vh;
+            margin-top: 7rem;
+            font-family: 'PP_Neue_Machina_Plain_Light';
+            padding: 3rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            gap: .5rem;
+
+            // padding: 2rem;        
+            .left {
+                width: 27%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                p {
+                    line-height: 2rem;
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
+
+                .exp {
+
+                    .button {
+
+                        h1 {
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            background-color: #E9BBFF;
+                            padding: .2rem .7rem;
+                            border: 1px solid black;
+                            margin: 1rem 0;
+                            width: fit-content;
+                            &:hover{
+                                background-color: white;
+                                color: #974fb8;
+                                border: 2px solid #E9BBFF;
+                            }
+                        }
+
+                    }
+
+                    h1 {
+                        font-size: 4rem;
+                        line-height: 3.5rem;
+                    }
+
+                }
+            }
+
+            .right {
+                width: 73%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 4rem;
+
+                .capsule {
+                    padding: 2rem;
+                    border-radius: 50% / 30%;
+                    border: 1px solid black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    transform: rotate(-25deg);
+
+                    .img {
+                        width: 13rem;
+                        height: 13rem;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .text {
+                        text-align: center;
+                        margin-top: 3rem;
+
+                        h3 {
+                            font-size: 1.5rem;
+                            line-height: 2rem;
+                        }
+                    }
+
+                    .text2 {
+                        text-align: center;
+                        margin-bottom: 3rem;
+
+                        h3 {
+                            font-size: 1.5rem;
+                            line-height: 2rem;
+                        }
+                    }
+
+                    .button {
+                        background-color: #E9BBFF;
+                        padding: .7rem;
+                        font-size: 1.2rem;
+                        border-radius: 1.5rem;
+                        margin: 3rem 0;
+
+                    }
+
+                    .button2 {
+                        background-color: #E9BBFF;
+                        padding: .7rem;
+                        font-size: 1.2rem;
+                        border-radius: 1.5rem;
+                        margin: 1rem 0 3rem;
+                    }
+                }
+            }
+        }
+        .footer {
+            padding: 20px;
+            width: 100%;
+            height: 55vh;
+        
+            .cont {
+                display: grid;
+                grid-template-columns: 4fr 2fr 1fr; // Different column widths for each item
+                gap: 10px; // Gap between grid items
+                padding: 2rem 3rem;
+                font-family: 'PP_Neue_Machina_Plain_Light';
+                margin-top: 5rem;
+        
+                .head {
+                    font-size: 5rem;
+                    line-height: 4rem;
+                }
+        
+                .text {
+                    font-size: 1.5rem;
+                    display: flex;
+                    align-items: flex-end;
+                    font-weight: 800;
+                }
+        
+                .svg {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1rem;
+                    overflow: hidden;
+                    img {
+                        animation: rotation 15s linear infinite; // Removed unnecessary properties from animation
+                        width: 10rem; // Adjust the size of the SVG image if needed
+                        height: 10rem;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+        
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        
+    }
